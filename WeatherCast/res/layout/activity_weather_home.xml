@@ -1,0 +1,319 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+     >
+
+
+   <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" > 
+	    
+	     
+    <TextView
+        android:id="@+id/cityText"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"  />
+
+     </LinearLayout> 
+
+   <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >   
+    
+       <TextView
+        android:id="@+id/coordsLab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cityText"
+        android:text="Location Coordinates: " 
+        android:layout_alignLeft="@id/cityText" /> 
+       
+    
+     
+    <TextView
+        android:id="@+id/coords"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/coordsLab" 
+        android:layout_alignBaseline="@id/coordsLab"
+        android:layout_marginLeft="10dp" />
+ </LinearLayout> 
+
+
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >   
+    <TextView
+        android:id="@+id/condDescr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/coordsLab"
+        android:layout_alignLeft="@id/cityText" 
+        android:textStyle="bold|italic"
+       />
+    
+    </LinearLayout> 
+    
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >    
+
+  
+
+    <TextView
+        android:id="@+id/temp"
+        style="@style/tempStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/condDescr"
+        android:layout_alignBaseline="@id/condDescr" />
+    
+     </LinearLayout> 
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" > 
+    
+        <Button
+        android:id="@+id/btnC"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/temp"
+        android:layout_marginLeft="20dp"
+        android:layout_alignBaseline="@id/temp"
+        android:text="C" />
+
+        <Button
+            android:id="@+id/btnF"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btnC"
+        	android:layout_marginLeft="1dp"
+        	android:layout_alignBaseline="@id/btnC"
+            android:text="F" />
+        
+         </LinearLayout> 
+        
+        
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" > 
+
+    <TextView
+        android:id="@+id/minTempLab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/temp"
+        android:layout_marginLeft="5dp"
+        android:text="Min temp" />
+    
+    <TextView
+        android:id="@+id/minTemp"
+        style="@style/minTempStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/minTempLab"
+        android:layout_toRightOf="@id/minTempLab"
+        android:layout_marginLeft="10dp"/>
+
+  </LinearLayout> 
+
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >   
+    <TextView
+        android:id="@+id/maxTempLab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/minTempLab"
+        android:layout_marginLeft="5dp"
+        android:text="Max temp" />
+    
+    <TextView
+        android:id="@+id/maxTemp"
+        style="@style/maxTempStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/maxTempLab"
+        android:layout_toRightOf="@id/maxTempLab"
+        android:layout_below="@id/minTempLab"
+        android:layout_marginLeft="10dp" />
+  </LinearLayout>
+
+
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >      
+
+    <TextView
+        android:id="@+id/pressLab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/maxTempLab"
+        android:layout_marginLeft="5dp"
+        android:text="Pressure" />
+
+    <TextView
+        android:id="@+id/press"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/pressLab"
+        android:layout_toRightOf="@id/pressLab" 
+        style="@style/data"
+        android:layout_marginLeft="10dp" />
+
+  </LinearLayout>
+
+
+
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >    
+
+    <TextView
+        android:id="@+id/humLab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/pressLab"
+        android:layout_marginLeft="5dp"
+        android:text="Humidity" />
+
+    <TextView
+        android:id="@+id/hum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/humLab"
+        android:layout_toRightOf="@id/humLab" 
+        android:layout_marginLeft="10dp"
+        style="@style/data"/> 
+      </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >    
+    <TextView
+        android:id="@+id/windLab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/humLab"
+        android:layout_marginLeft="5dp"
+        android:text="Wind" />
+
+    <TextView
+        android:id="@+id/windSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/windLab"
+        android:layout_toRightOf="@id/windLab"
+        android:layout_marginLeft="10dp"
+        style="@style/data" />
+
+    <TextView
+        android:id="@+id/windDeg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/windSpeed"
+        android:layout_toRightOf="@id/windSpeed"
+        android:layout_marginLeft="10dp" 
+        style="@style/data"/>
+
+   </LinearLayout>
+
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >	 
+        <Button
+            android:id="@+id/btn_refresh"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_below="@id/windLab"
+            android:text="Refresh" />
+ 
+      </LinearLayout>
+
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >	 
+
+<EditText
+    android:id="@+id/txtCityName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/btn_refresh"
+    android:ems="10" />
+
+  </LinearLayout>
+
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >	
+
+        <Button
+            android:id="@+id/btn_search"
+            style="?android:attr/buttonStyleSmall"  
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="0.5"
+            android:layout_below="@id/txtCityName"
+            android:text="Search Another City" />
+        
+        
+ </LinearLayout>       
+      
+
+  
+
+<android.support.v4.view.ViewPager
+    
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="6" >
+
+    <android.support.v4.view.PagerTitleStrip
+        android:id="@+id/pager_title_strip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="#E6E6E6"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:textColor="#fff" />
+    
+	</android.support.v4.view.ViewPager> 
+
+</LinearLayout>
+
